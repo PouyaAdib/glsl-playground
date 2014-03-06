@@ -1,6 +1,6 @@
 {
   "name": "glsl-playground",
-  "version": "0.1.0-beta.8",
+  "version": "0.1.0-beta.9",
   "description": "(work in progress)",
   "keywords": [
     "webgl",
@@ -28,6 +28,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "cake build"
   },
+  "main": "scripts/js/lib/Server.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/PouyaAdn/glsl-playground.git"
@@ -43,6 +44,6 @@
     }
   ],
   "bin": {
-    "glslp": "./bin/glslp"
+    "glslp": "bin/glslp.js"
   }
 }
