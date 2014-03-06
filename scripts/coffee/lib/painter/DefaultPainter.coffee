@@ -178,6 +178,16 @@ module.exports = class DefaultPainter
 
 				@_layers[name].blend yes, layer.blend.src, layer.blend.dst
 
+		if conf.size
+
+			w = conf.size.width
+			h = conf.size.height
+
+			@gila.setViewportSize w, h
+
+			@gila.canvas.width = w
+			@gila.canvas.height = h
+
 		@_frameBufferInstructions = {}
 		@_usesFrameBuffers = no
 
