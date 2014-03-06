@@ -33,7 +33,6 @@ module.exports = class Playground
 
 	_updateIfNecessary: (config) ->
 
-
 		return if config.updateTime is @_updateTime
 
 		console.log 'updating'
@@ -44,7 +43,7 @@ module.exports = class Playground
 
 		try
 
-			@painter.setConfig config, "/playground/#{@pgName}/"
+			@painter.setConfig config
 
 			@painter.play()
 

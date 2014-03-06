@@ -20,8 +20,6 @@ module.exports = class DefaultPainter
 
 		@_addVertexShader 'default', defaultShaders.vert
 
-		@_addFragmentShader 'default', defaultShaders.frag
-
 		@paused = yes
 
 		@_timing = new Timing
@@ -114,7 +112,7 @@ module.exports = class DefaultPainter
 
 		@
 
-	setConfig: (conf, uri) ->
+	setConfig: (conf) ->
 
 		@_resetShaders()
 
@@ -122,7 +120,7 @@ module.exports = class DefaultPainter
 
 		for name, filename of conf.textures
 
-			@_addTexture name, uri + 'textures/' + filename
+			@_addTexture name, '/textures/' + filename
 
 		for name, source of conf.fragShaders
 
@@ -233,11 +231,13 @@ module.exports = class DefaultPainter
 
 			for i in [0..1]
 
-				@_frameBuffers.push @gila.makeFrameBuffer()
-				.bind()
-				.useRenderBufferForDepth()
-				.useTextureForColor()
-				.unbind()
+				@_frameBuffers.push(
+					@gila.makeFrameBuffer()
+					.bind()
+					.useRenderBufferForDepth()
+					.useTextureForColor()
+					.unbind()
+				)
 
 		return
 

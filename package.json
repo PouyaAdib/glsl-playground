@@ -26,5 +26,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AriaMinaei/glsl-playground/issues"
+  },
+  "bin": {
+    "glslp": "./bin/glslp"
   }
 }

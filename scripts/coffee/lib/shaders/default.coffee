@@ -1,9 +1,15 @@
-#
+module.exports.vert = "
 
-macro read (node) ->
+	attribute vec3 vx;
 
-	macro.valToNode String macro.require('fs').readFileSync macro.nodeToVal node
+	varying vec2 vTexCoord;
 
-module.exports.vert = read 'coffee/lib/shaders/default.vert'
+	void main() {
 
-module.exports.frag = read 'coffee/lib/shaders/default.frag'
+		gl_Position = vec4(vx, 1.0);
+
+		vTexCoord = vec2(vx.xy / 2.0 + 0.5);
+
+	}
+
+"
