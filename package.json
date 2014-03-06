@@ -1,11 +1,19 @@
 {
   "name": "glsl-playground",
-  "version": "0.1.0-beta.6",
+  "version": "0.1.0-beta.7",
   "description": "(work in progress)",
+  "keywords": [
+    "webgl",
+    "glsl"
+  ],
+  "bugs": {
+    "url": "https://github.com/AriaMinaei/glsl-playground/issues"
+  },
+  "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "cson": "~1.4.5",
-    "gila": "*",
+    "gila": "~0.1.0-beta.8",
     "raf-timing": "*",
     "utila": "*",
     "mime": "~1.2.11",
@@ -13,20 +21,27 @@
     "graceful-fs": "~2.0.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "browserify": "~3.32.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "cake build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AriaMinaei/glsl-playground.git"
+    "url": "https://github.com/PouyaAdn/glsl-playground.git"
   },
-  "author": "Aria Minaei",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AriaMinaei/glsl-playground/issues"
+  "author": {
+    "name": "Aria Minaei",
+    "email": "aria.minaei@gmail.com"
   },
+  "maintainers": [
+    {
+      "name": "Pouya Adn",
+      "email": "pouyaadn@gmail.com"
+    }
+  ],
   "bin": {
     "glslp": "./bin/glslp"
   }
